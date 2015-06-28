@@ -1,0 +1,1 @@
+SELECT CONCAT("/static/bg/", CAST(RAND() * 11 AS INT), ".jpg") naam;
