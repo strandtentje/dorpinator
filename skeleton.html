@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Dorpinator
+		</title>
+		<link rel="stylesheet" type="text/css" href="/static/font/style.css">
+		<style type="text/css">
+			html {
+				width: 100%;
+				height: 100%;
+			}
+
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: 0;
+				position: absolute;
+				background-image: url('{% image %}');
+				background-size: cover;
+				background-position: center center;
+			}
+
+			#kader {
+				background-color: #2072C3;
+				border-radius: 0.3cm;
+				position: fixed;
+				width: 15cm;
+				top: 10%;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;				
+				left: 0;
+				right: 0;
+				color: white;
+			}
+
+			#bord {
+				font-family: 'Blue Highway';
+				border-radius: 0.15cm;
+				border: solid 0.1cm white;
+				margin: 0.2cm;
+			}
+
+			#plaatsnaam {
+				display:  block;
+				font-size: 40pt;
+			}
+
+			#provincie {
+				display: block;
+				font-size: 16pt;
+				background: white;
+				color: #2072C3;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="kader">
+			<div id="bord">
+				<span id="plaatsnaam">
+					{% plaatsnaam %}
+				</span>
+				<span id="provincie">
+					Provincie {% provincie %}
+				</span>
+			</div>
+		</div>
+	</body>
+</html>
