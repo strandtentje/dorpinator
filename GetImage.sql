@@ -1,1 +1,5 @@
-SELECT CONCAT("/static/bg/", CAST(RAND() * 11 AS INT), ".jpg") naam;
+SELECT 
+	image,
+	credit
+FROM 
+	plaatsnaam.Image ORDER BY RAND() LIMIT 1;
