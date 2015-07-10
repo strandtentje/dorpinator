@@ -62,35 +62,89 @@
 			}
 
 			#credit {
-				position: fixed;
+				color: #ccc;
+				background: #333;
+				font-size: 9pt;
 				font-family: sans-serif;
-				color: black;
-				bottom: 5px;
-				left: 5px;
-				font-size: 10pt;
+				padding: 3px;
+				position: fixed;
+				bottom: calc(6px + 9pt);
+				left: 0;
+				width: calc(100% - 6px);	
+			}
+
+			@media(min-width: 600px) {
+				#credit {
+					color: white;
+					background: teal;	
+					border-top: solid 5px #fff;
+					border-right: solid 5px #fff;
+					border-top-right-radius: 10px;
+					opacity: 0.6;
+					padding: 10px;
+					bottom: 0;
+					width: auto;
+					font-size: 13pt;
+					width: auto;
+				}
 			}
 
 			#credit a, #imagecredit a {
-				color: black;
+				color: white;
 			}
 
-			.pand {
-				display: none;
+			#credit:hover {
+				opacity: 1;
 			}
 
-			.ex:hover .pand {
-				display: block;
+			.ex>a:after {
+				content: ':'
+			}
+
+			@media(min-width: 600px) {			
+				.pand {
+					display: none;
+				}
+
+				.ex>a:after {
+					content: '...';
+				}
+
+				.ex:hover .pand {
+					display: block;
+				}
 			}
 
 			#imagecredit {
-				position: fixed;
 				font-family: sans-serif;
-				color: black;
-				bottom: 5px;
-				right: 5px;
-				font-size: 10pt;
+				color: #ccc;
+				background: #333;
+				font-size: 9pt;
+				position: fixed;
+				bottom: 0;
+				right: 0px;
+				padding: 3px;
+				width: calc(100% - 6px);			
 			}
 
+			@media(min-width: 600px) {
+				#imagecredit {
+					color: white;
+					background: teal;	
+					border-top: solid 5px #fff;
+					border-left: solid 5px #fff;
+					border-top-left-radius: 10px;
+					width: auto;
+					opacity: 0.6;
+					padding: 10px;
+					font-size: 13pt;
+					width: auto;
+				}
+			}
+
+			#imagecredit:hover {
+				opacity: 1;
+			}
 		</style>
 	</head>
 	<body>
@@ -108,7 +162,7 @@
 			Photography sourced from <a href="{% credit %}">here</a>.
 		</span>
 		<div id="credit" class="ex">
-			<a href="#!">About Dorpinator...</a>
+			<a href="#!">About Dorpinator</a>
 			<span class="pand">
 				Built in <a href="//github.com/strandtentje/apollogeese">ApolloGeese</a>
 				to fulfill Tom Hendriks' ramblings, by
