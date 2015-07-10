@@ -1,5 +1,5 @@
 SELECT
-	CONCAT(Begin.text, Eind.text) naam
+	CONCAT(Begin.text, "&shy;", Eind.text) naam
 FROM
 	(SELECT text, 1 AS fop FROM Component WHERE position = 0 ORDER BY RAND() LIMIT 1) AS Begin 
     JOIN
