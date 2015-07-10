@@ -4,6 +4,10 @@ var provincieTekst = document.getElementById("provincietekst");
 
 volgendeKnop.setAttribute("href", "#!");
 
+if (!Date.now) {
+    Date.now = function() { return new Date().getTime(); }
+}
+
 volgendeKnop.onclick = function() {
     var xmlhttp = new XMLHttpRequest();
 	
@@ -13,8 +17,8 @@ volgendeKnop.onclick = function() {
 	        jsonReady(jsonData);
 	    }
 	};
-	
-	xmlhttp.open("GET", "/api", true);
+
+	xmlhttp.open("GET", "/api?ts=" + Date.now(), true);
 	xmlhttp.send();
 
 	function jsonReady(jsonData) {
