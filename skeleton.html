@@ -17,7 +17,7 @@
 					{% plaatsnaam %}
 				</span>
 				<span id="provincie">
-					<a style="text-decoration: none; color: #2072C3;" href="/">Provincie {% provincie %} &#9656;</a>
+					<a id="volgende" style="text-decoration: none; color: #2072C3;" href="/">Provincie <span id="provincietekst">{% provincie %}</a> &#9656;</a>
 				</span>
 			</div>
 		</div>
@@ -38,5 +38,8 @@
 				<a href="/apidoc">api</a>
 			</li>
 		</ul>
+		<script type="text/javascript">
+			{% script %}
+		</script>
 	</body>
 </html>
