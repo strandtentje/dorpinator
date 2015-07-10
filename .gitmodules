@@ -1,0 +1,3 @@
+[submodule "min"]
+	path = min
+	url = https://github.com/strandtentje/agminify
