@@ -51,14 +51,24 @@
 
 			#plaatsnaam {
 				display:  block;
-				font-size: 10vh;
+				font-size: 2cm;
 			}
 
 			#provincie {
 				display: block;
-				font-size: 5vh;
+				font-size: 1cm;
 				background: white;
 				color: #2072C3;
+			}
+
+			@media(min-width: 600px) {
+				#plaatsnaam {
+					font-size: 3cm;
+				}
+
+				#provincie {
+					font-size: 1.3cm;
+				}
 			}
 
 			#credits {
@@ -85,6 +95,10 @@
 				text-decoration: none;
 				color: white;
 				font-size: 12pt;
+			}
+
+			#credits a:hover {
+				border-bottom: solid 2px white;
 			}
 
 			#credits li {
