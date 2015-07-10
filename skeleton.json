@@ -1,0 +1,6 @@
+{
+	"town": "{% plaatsnaam %}",
+	"province": "{% provincie %}",
+	"backgroundimage": "{% image %}",
+	"backgroundimageauthor": "{% credit %}"
+}
