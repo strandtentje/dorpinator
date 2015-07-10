@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dorpinator API 1.0 docs</title>
+		<style type="text/css">
+			.label:before {
+				content: '+';
+			}
+
+			.domain:before {
+				content: '@';
+			}
+
+			.tld:before {
+				content: '.';
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Dorpinator API 1.0 docs</h1>
+		<p>
+			Do your GET request at <code><a href="http://www.dorpinator.nl/api/">http://www.dorpinator.nl/api/</a></code>. This will dorpinate into JSON.
+		</p>
+		<p>
+			This JSON will contain the following data:
+		</p>
+		<table>
+			<tr>
+				<td>backgroundimage</td>
+				<td>Link to a background image</td>
+			</tr>
+			<tr>
+				<td>backgroundimageauthor</td>
+				<td>
+					Link to license and author information about background image
+				</td>
+			</tr>
+			<tr>
+				<td>town</td>
+				<td>
+					A dorpinated town
+				</td>
+			</tr>
+			<tr>
+				<td>province</td>
+				<td>
+					A dorpinated province
+				</td>
+			</tr>				
+		</table>
+		<h2>Official things</h2>
+		<p>
+			You are required to provide the link below when presenting output of this API in your application:
+		</p>
+		<table>
+			<tr>
+				<td>
+					Link
+				</td>
+				<td>
+					HTML
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://www.dorpinator.nl/">Powered by Dorpinator.nl</a>
+				</td>
+				<td>					
+					<code>
+						&lt;a href="http://www.dorpinator.nl/"&gt;Powered by Dorpinator.nl&lt;/a&gt;
+					</code>
+				</td>
+			</tr>
+		</table>
+		</p>
+		<p>
+			You are probably also required to provide credit to the photographer, when using the photograph in <code>backgroundimage</code>. Use <code>backgroundimageauthor</code> to acquire information about the author.
+		</p>
+		<p>
+			Your application should not do more than a request per second, primarily because I have no idea what sort of performance the underlying infrastructure is capable of. I am uninterested in finding out the hard way.
+		</p>
+		<p>
+			If the API proves popular, API keys will be enabled and API 1.0 will be deprecated. Drop a line at 
+			<code><span class="user">teh</span><span class="label">dorpinatorapi</span><span class="domain">borreh</span><span class="tld">nl</span></code> if you'd like to be kept in the loop about this.
+		</p>
+	</body>
+</html>
