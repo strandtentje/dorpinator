@@ -61,89 +61,36 @@
 				color: #2072C3;
 			}
 
-			#credit {
-				color: #ccc;
-				background: #333;
-				font-size: 9pt;
-				font-family: sans-serif;
-				padding: 3px;
-				position: fixed;
-				bottom: calc(6px + 9pt);
-				left: 0;
-				width: calc(100% - 6px);	
-			}
-
-			@media(min-width: 600px) {
-				#credit {
-					color: white;
-					background: teal;	
-					border-top: solid 5px #fff;
-					border-right: solid 5px #fff;
-					border-top-right-radius: 10px;
-					opacity: 0.6;
-					padding: 10px;
-					bottom: 0;
-					width: auto;
-					font-size: 13pt;
-					width: auto;
-				}
-			}
-
-			#credit a, #imagecredit a {
-				color: white;
-			}
-
-			#credit:hover {
-				opacity: 1;
-			}
-
-			.ex>a:after {
-				content: ':'
-			}
-
-			@media(min-width: 600px) {			
-				.pand {
-					display: none;
-				}
-
-				.ex>a:after {
-					content: '...';
-				}
-
-				.ex:hover .pand {
-					display: block;
-				}
-			}
-
-			#imagecredit {
-				font-family: sans-serif;
-				color: #ccc;
-				background: #333;
-				font-size: 9pt;
-				position: fixed;
-				bottom: 0;
+			#credits {
+				list-style-type: none;
+				padding: 5px;
+				margin: 0 auto;
+				left: 0px;
 				right: 0px;
-				padding: 3px;
-				width: calc(100% - 6px);			
+				display: block;
+				text-align: center;
+				width: 7cm;
+				position: fixed;
+				bottom: 0px;
+				box-sizing: border-box;
+				font-family: sans-serif;
+				border: solid 4px white;
+				border-top-left-radius: 7px;
+				border-top-right-radius: 7px;
+				border-bottom: none;
+				background: teal;
 			}
 
-			@media(min-width: 600px) {
-				#imagecredit {
-					color: white;
-					background: teal;	
-					border-top: solid 5px #fff;
-					border-left: solid 5px #fff;
-					border-top-left-radius: 10px;
-					width: auto;
-					opacity: 0.6;
-					padding: 10px;
-					font-size: 13pt;
-					width: auto;
-				}
+			#credits a {
+				text-decoration: none;
+				color: white;
+				font-size: 12pt;
 			}
 
-			#imagecredit:hover {
-				opacity: 1;
+			#credits li {
+				display: inline;
+				padding: 0;
+				margin: 0;
 			}
 		</style>
 	</head>
@@ -158,19 +105,22 @@
 				</span>
 			</div>
 		</div>
-		<span id="imagecredit">
-			Photography sourced from <a href="{% credit %}">here</a>.
-		</span>
-		<div id="credit" class="ex">
-			<a href="#!">About Dorpinator</a>
-			<span class="pand">
-				Built in <a href="//github.com/strandtentje/apollogeese">ApolloGeese</a>
-				to fulfill Tom Hendriks' ramblings, by
-				<a href="//borreh.nl/">Rob Tierolff</a>. Font is 
-				<a href="//typodermicfonts.com/blue-highway-5-0/">Blue Highway</a> 
-				by 
-				<a href="//typodermicfonts.com/contact/">Typodermic Fonts</a>
-			</span>
-		</div>
+		<ul id="credits">
+			<li>
+				<a href="{% credit %}">photo</a>
+			</li>
+			<li>
+				<a href="//typodermicfonts.com/blue-highway-5-0/">font</a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/tomhendriksmuziek">tom</a>
+			</li>
+			<li>
+				<a href="http://www.borreh.nl/">rob</a>
+			</li>
+			<li>
+				<a href="/apidoc">api</a>
+			</li>
+		</ul>
 	</body>
 </html>
