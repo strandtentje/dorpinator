@@ -5,6 +5,7 @@
 			Dorpinator
 		</title>
 		<link rel="stylesheet" type="text/css" href="/static/font/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style type="text/css">
 			html {
 				width: 100%;
@@ -30,7 +31,7 @@
 				background-color: #2072C3;
 				border-radius: 0.3cm;
 				position: fixed;
-				width: 15cm;
+				width: 18cm;
 				top: 10%;
 				text-align: center;
 				margin-left: auto;
@@ -38,6 +39,7 @@
 				left: 0;
 				right: 0;
 				color: white;
+				max-width: 100%;
 			}
 
 			#bord {
@@ -49,14 +51,44 @@
 
 			#plaatsnaam {
 				display:  block;
-				font-size: 40pt;
+				font-size: 10vh;
 			}
 
 			#provincie {
 				display: block;
-				font-size: 16pt;
+				font-size: 5vh;
 				background: white;
 				color: #2072C3;
+			}
+
+			#credit {
+				position: fixed;
+				font-family: sans-serif;
+				color: black;
+				bottom: 5px;
+				left: 5px;
+				font-size: 10pt;
+			}
+
+			#credit a, #imagecredit a {
+				color: black;
+			}
+
+			.pand {
+				display: none;
+			}
+
+			.ex:hover .pand {
+				display: block;
+			}
+
+			#imagecredit {
+				position: fixed;
+				font-family: sans-serif;
+				color: black;
+				bottom: 5px;
+				right: 5px;
+				font-size: 10pt;
 			}
 
 		</style>
@@ -68,9 +100,23 @@
 					{% plaatsnaam %}
 				</span>
 				<span id="provincie">
-					Provincie {% provincie %}
+					<a style="text-decoration: none; color: #2072C3;" href="/">Provincie {% provincie %} &#9656;</a>
 				</span>
 			</div>
+		</div>
+		<span id="imagecredit">
+			Photography sourced from <a href="{% credit %}">here</a>.
+		</span>
+		<div id="credit" class="ex">
+			<a href="#!">About Dorpinator...</a>
+			<span class="pand">
+				Built in <a href="//github.com/strandtentje/apollogeese">ApolloGeese</a>
+				to fulfill Tom Hendriks' ramblings, by
+				<a href="//borreh.nl/">Rob Tierolff</a>. Font is 
+				<a href="//typodermicfonts.com/blue-highway-5-0/">Blue Highway</a> 
+				by 
+				<a href="//typodermicfonts.com/contact/">Typodermic Fonts</a>
+			</span>
 		</div>
 	</body>
 </html>
