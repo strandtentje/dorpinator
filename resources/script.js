@@ -18,7 +18,7 @@ volgendeKnop.onclick = function() {
 	    }
 	};
 
-	xmlhttp.open("GET", "/api?ts=" + Date.now(), true);
+	xmlhttp.open("GET", "{% locale %}/api?ts=" + Date.now(), true);
 	xmlhttp.send();
 
 	function jsonReady(jsonData) {

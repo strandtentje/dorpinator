@@ -2,4 +2,7 @@ SELECT
 	image,
 	credit
 FROM 
-	plaatsnaam.Image ORDER BY RAND() LIMIT 1;
+	plaatsnaam.Image 
+WHERE
+	locale = @locale
+ORDER BY RAND() LIMIT 1;
