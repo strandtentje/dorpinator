@@ -30,6 +30,7 @@ body {
 	right: 0;
 	color: black;
 	max-width: 100%;
+	text-transform: uppercase;
 }
 
 #bord {
