@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Villebury
+		</title>
+		<link rel="stylesheet" type="text/css" href="/static/font/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+			{% style %}
+		</style>
+	</head>
+	<body style="background-image: url('{% image %}');">
+		<div id="kader">
+			<div id="bord">
+				<span id="plaatsnaam">
+					{% plaatsnaam %}
+				</span>
+				<span id="provincie">
+					<a id="volgende" style="text-decoration: none; color: black;" href="/"><span id="provincietekst">{% provincie %}</span> &#x27f3;</a>
+				</span>
+			</div>
+		</div>
+		<ul id="credits">
+			<li>
+				<a href="{% credit %}">photo</a>
+			</li>
+			<li>
+				<a href="//typodermicfonts.com/blue-highway-5-0/">font</a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/tomhendriksmuziek">tom</a>
+			</li>
+			<li>
+				<a href="http://www.borreh.nl/">rob</a>
+			</li>
+			<li>
+				<a href="/apidoc">api</a>
+			</li>
+			<li>
+				<a href="https://github.com/strandtentje/dorpinator">git</a>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			{% script %}
+		</script>
+	</body>
+</html>

@@ -1,6 +1,7 @@
 var volgendeKnop = document.getElementById ("volgende");
 var plaatsNaam = document.getElementById("plaatsnaam");
 var provincieTekst = document.getElementById("provincietekst");
+var url = "/" + ("{% locale %}/api?ts=").replace(/^\/+/,"");
 
 volgendeKnop.setAttribute("href", "#!");
 
@@ -18,7 +19,7 @@ volgendeKnop.onclick = function() {
 	    }
 	};
 
-	xmlhttp.open("GET", "{% locale %}/api?ts=" + Date.now(), true);
+	xmlhttp.open("GET", url + Date.now(), true);
 	xmlhttp.send();
 
 	function jsonReady(jsonData) {
