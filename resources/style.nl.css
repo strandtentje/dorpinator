@@ -17,12 +17,12 @@ body {
 	background-position: center center;
 }
 
-#kader {
+#kader, #vorigkader {
 	background-color: #2072C3;
 	border-radius: 0.3cm;
-	position: fixed;
+	position: relative;
 	width: 18cm;
-	top: 10%;
+	top: 8%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;				
@@ -30,34 +30,65 @@ body {
 	right: 0;
 	color: white;
 	max-width: 100%;
+	padding: 1px;
 }
 
-#bord {
+#vorigkader {
+	width: 15cm;
+	top: 12%;
+	display: none;
+}
+
+#titel {
+	background: white;
+	color: #2072C3;
+	font-size: 0.9cm;
+	display: block;
+	width: 100%;
+}
+
+#bord, #vorigbord {
 	font-family: 'Blue Highway';
 	border-radius: 0.15cm;
 	border: solid 0.1cm white;
 	margin: 0.2cm;
 }
 
-#plaatsnaam {
+#plaatsnaam, #vorigplaatsnaam {
 	display:  block;
 	font-size: 2cm;
 }
 
-#provincie {
+#vorigplaatsnaam {
+	font-size: 1.7cm;
+}
+
+#provincie, #vorigprovincie {
 	display: block;
 	font-size: 1cm;
 	background: white;
 	color: #2072C3;
 }
 
+#vorigprovincie {
+	font-size: 0.7cm;
+}
+
 @media(min-width: 600px) {
-	#plaatsnaam {
+	#plaatsnaam, #vorigplaatsnaam {
 		font-size: 3cm;
 	}
 
-	#provincie {
+	#vorigplaatsnaam {
+		font-size: 2.1cm;
+	}
+
+	#provincie, #vorigprovincie {
 		font-size: 1.3cm;
+	}
+
+	#vorigprovincie {
+		font-size: 0.9cm;
 	}
 }
 
